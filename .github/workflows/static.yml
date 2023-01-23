@@ -1,0 +1,11 @@
+- name: Astro Deploy
+  # You may pin to the exact commit or the version.
+  # uses: withastro/action@4bc96d3ea1cb1c93fc300aee51cf420a12799b3f
+  uses: withastro/action@v0
+  with:
+    # Path of the directory containing your site
+    path: # optional, default is .
+    # The node version to use
+    node-version: # optional, default is 16
+    # If not automatically detectable, you may specify your preferred package manager
+    package-manager: # optional, default is 
