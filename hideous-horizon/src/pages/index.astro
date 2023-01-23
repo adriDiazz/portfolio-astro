@@ -1,0 +1,175 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Text from '../components/Text.astro';
+import TopNavbar from '../components/TopNavbar.astro';
+import Skills from '../components/Skills.astro';
+import { Carrousel } from '../components/Carrousel';
+import { ContactForm } from '../components/ContactForm';
+---
+
+
+<Layout title="Portfolio">
+	
+	<div class="main-container">
+		<div class="content-container">
+			<TopNavbar />
+			<div class="left-nav">
+				<Navbar />
+			</div>
+
+			<Text />
+
+			<div class="imagen">
+				<img src="Frame 1 (1).svg" alt="" class="earth">
+				<!-- <img src="Group" alt="" class="earth"> -->
+			</div>
+		</div>
+	</div>
+
+	<section>
+		<div class="info-section">
+			<h2 class="title2">About Me</h2>
+			<div class="info">
+					<div class="text">
+						<p>Mi nombre es Adrian tengo 20 anos, soy estudiante de Ingenieria Informatica actualmente en el tercer ano.
+							Apasionado del desarrollo web. Mi objetivo actual es convertirme en un gran desarrollador Full Stack.Me encanta aprender constantemente y crear mis propios proyectos.
+							Me considero una persona seria,  responsable, empatico, trabajador y muy comprometido con lo que me propongo
+						</p>
+						<button>Download CV <img src="dw.svg" alt=""></button>
+					</div>
+
+					<div class="image">
+						<img src="astronauta.svg" alt="">
+					</div>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="skills">
+			<div class="opacityBackground">
+				<h2 class="title2">My Skills</h2>
+				<p class="light">Here is a list of some of my skills</p>
+				<Skills />
+			</div>
+		</div>
+	</section>
+
+	<Carrousel client:visible/>
+	<ContactForm />
+	
+</Layout>
+
+<style>
+	.main-container {
+		width: 100vw;
+		height: 100vh;
+		background-image: url(background.webp);
+		overflow: hidden;
+	}
+
+	.main-container img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+
+	.earth {
+		transform: rotate(90deg);
+	}
+
+	.info-section {
+		width: 100vw;
+		background-color: #190024;
+		height: max-content;
+    	min-height: 100vh;
+	}
+
+	.title2 {
+		color: transparent;
+        font-size: 3rem;
+        -webkit-text-stroke: 2px #CEB7FF;
+		text-align: center;
+		padding: 2rem;
+		margin: 0;
+	}
+
+	.info {
+		display: grid;
+		grid-template-columns: 55% 45%;
+		align-items: center;
+
+	}
+
+	.text {
+		padding: 2rem;
+		margin-left: 8rem;
+		color: #fff;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-end;
+	}
+
+	.text button {
+		border: none;
+		border-radius: 20px;
+		background-color: #CEB7FF;
+		color: #fff;
+		font-weight: 300;
+		padding: 1rem 2rem;
+		display: flex;
+		align-items: center;
+		margin-top: 1rem;
+		gap : 1rem;
+		box-shadow: 0 0 1em 0 #a07af3;
+	}
+
+	.text p {
+		font-size: 1.5rem;
+		line-height: 25px;
+		border: 2px solid #CEB7FF;
+		padding: 2rem;
+		border-radius: 20px;
+		font-weight: 300;
+	}
+
+	.image {
+		filter: drop-shadow(10px 10px 200px $tod-tri) drop-shadow(-10px -10px 50px $tod-tri);
+	}
+
+
+	.image img {
+		width: 40rem;
+		filter: drop-shadow(0 0 1em #CEB7FF);
+		margin-bottom: 2rem;
+	}
+
+	.skills {
+		width: 100vw;
+		height: 100vh;
+		background-image: url(space background.webp);
+		height: max-content;
+    	min-height: 100vh;
+	}
+
+	.opacityBackground {
+		width: 100%;
+		height: 100vh;
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+
+	.opacityBackground p {
+		color: #fff;
+		text-align: center;
+		font-size: 1.5rem;
+		font-weight: 300;
+		-webkit-text-stroke: 2px #CEB7FF;
+	}
+
+
+
+</style>
+

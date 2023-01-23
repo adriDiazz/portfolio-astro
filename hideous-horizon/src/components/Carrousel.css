@@ -1,0 +1,150 @@
+.projects {
+    width: 100vw;
+    height: max-content;
+    min-height: 100vh;
+    background-color: #190024;
+}
+
+.light{
+    color: transparent;
+    font-size: 3rem;
+    -webkit-text-stroke: 2px #CEB7FF;
+    text-align: center;
+    margin: 0;
+    padding: 2rem;
+}
+
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* gap: 2rem; */
+    padding: 0rem 5rem 0rem 5rem;
+    justify-items: flex-end;
+    /* margin-right: 9rem; */
+
+
+}
+
+.card2 {
+    background-color: transparent;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* box-shadow: 0 0 1em 0 #a07af3; */
+    border : 3px solid #CEB7FF;
+    width: 90%;
+    height: 100%;
+    /* height: 624px; */
+
+}
+
+.imgProject {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+
+
+.imgProject2 {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+
+.card2 h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 1rem 0;
+    color: #fff;
+}
+
+.parr{
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: center;
+    color: #fff;
+    padding: 1rem;
+}
+
+.tecs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.tec {
+    /* width: 3rem; */
+    height: 3rem;
+}
+
+.btnSee {
+    border-radius: 20px;
+    background-color: #CEB7FF;
+    color: #fff;
+    padding: 1rem 1rem;
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+
+.pageSelector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem ; 
+    margin-top: 2rem;
+}
+
+.page {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: #fFF;
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+
+.arrD {
+    transform: rotate(180deg);
+}
+
+.arr{
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+}
+
+.selectedPage {
+    width: 2rem;
+    height: 2rem;
+    background-color: #CEB7FF;
+}
+
+@media screen and (max-width: 768px) {
+    .cards {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        margin-right: 0;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .imgProject2 {
+        height: 30%;
+    }
+
+    .pageSelector {
+        margin-top: 2rem;
+    }
+}
