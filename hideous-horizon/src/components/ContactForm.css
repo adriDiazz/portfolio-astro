@@ -98,7 +98,10 @@
     color: #fff;
     font-size: 0.8rem;
     font-weight: 600;
-    padding: 0 2rem;
+}
+
+.p {
+    margin-left: 2rem;
 }
 
 .navcontainer2 {

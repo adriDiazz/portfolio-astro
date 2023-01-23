@@ -27,12 +27,8 @@ export const ContactForm = () => {
 
         </div>
                 <div className="footer">
-                    <p>© 2021 - All rights reserved</p>
+                    <p className="p">© 2021 - All rights reserved</p>
                     <p>Adrian Diaz Manzanares</p>
-               
-                      <a href=""><img src="github.svg" alt=""/></a>
-                     <a href=""><img src="instagram.svg" alt=""/></a>
-                   <a href=""><img src="lnkdin.svg" alt=""/></a>
 
                 </div>
         </>
