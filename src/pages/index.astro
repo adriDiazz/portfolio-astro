@@ -32,11 +32,9 @@ import { ContactForm } from '../components/ContactForm';
 			<h2 class="title2">About Me</h2>
 			<div class="info">
 					<div class="text">
-						<p>Mi nombre es Adrian tengo 20 anos, soy estudiante de Ingenieria Informatica actualmente en el tercer ano.
-							Apasionado del desarrollo web. Mi objetivo actual es convertirme en un gran desarrollador Full Stack.Me encanta aprender constantemente y crear mis propios proyectos.
-							Me considero una persona seria,  responsable, empatico, trabajador y muy comprometido con lo que me propongo
+						<p>My name is Adrian, I'm 20 years old, I'm a Computer Science student currently in my third year. Passionate about web development. My current goal is to become a great Full Stack developer. I love constantly learning and creating my own projects. I consider myself a serious, responsible, empathetic, hard-working person and very committed to what I propose.
 						</p>
-						<button>Download CV <img src="dw.svg" alt=""></button>
+						<button><a href="Curriculum vitae.pdf">Download CV </a><img src="dw.svg" alt=""></button>
 					</div>
 
 					<div class="image">
@@ -125,6 +123,15 @@ import { ContactForm } from '../components/ContactForm';
 		margin-top: 1rem;
 		gap : 1rem;
 		box-shadow: 0 0 1em 0 #a07af3;
+	}
+
+	.text button:hover {
+		background-color: #a07af3;
+	}
+
+	.text button a {
+		color: #fff;
+		text-decoration: none;
 	}
 
 	.text p {
