@@ -22,6 +22,12 @@ import Layout from '../layouts/Layout.astro';
 					<img src="arrow.svg" alt="">
 				</div>
 			</div>
+			<div class="rightNav">
+				<div class="rounded"></div>
+				<div class="rounded"></div>
+				<div class="rounded"></div>
+				<div class="rounded"></div>
+			</div>
 		</div>
 	</div>
 
@@ -213,8 +219,21 @@ import Layout from '../layouts/Layout.astro';
 }
 
 .skills img {
-	width: 2rem;
+	width: 3rem;
 	padding: 1rem;
+}
+
+.rightNav {
+	display: flex;
+	flex-direction: column;
+	width: 128px;
+}
+
+.rounded {
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+	color: #7F5AF0;
 }
 	
 </style>
