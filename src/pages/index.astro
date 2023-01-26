@@ -1,182 +1,223 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar.astro';
-import Text from '../components/Text.astro';
-import TopNavbar from '../components/TopNavbar.astro';
-import Skills from '../components/Skills.astro';
-import { Carrousel } from '../components/Carrousel';
-import { ContactForm } from '../components/ContactForm';
+
 ---
 
 
 <Layout title="Portfolio">
-	
-	<div class="main-container">
-		<div class="content-container">
-			<TopNavbar />
-			<div class="left-nav">
-				<Navbar />
+	<div class="topcontainer1">
+		<img src="logo.svg" alt="">
+		<div class="topcontainer">
+			<div class="leftNav">
+				<img src="instagram.svg" alt="">
+				<img src="githb.svg" alt="">
+				<img src="linkdin.svg" alt="" >
 			</div>
-
-			<Text />
-
-			<div class="imagen">
-				<img src="Frame 1 (1).svg" alt="" class="earth">
-				<!-- <img src="Group" alt="" class="earth"> -->
+			<div class="contentcontainer">
+				<div class="content">
+					<h1>Bienvenido, soy <span>Adrian</span></h1>
+					<p>Computer Science student at Universidad Europea
+					</p>
+					<button class="btn">Download Cv</button>
+					<img src="arrow.svg" alt="">
+				</div>
 			</div>
 		</div>
 	</div>
 
 	<section>
-		<div class="info-section">
-			<h2 class="title2">About Me</h2>
-			<div class="info">
-					<div class="text">
-						<p>My name is Adrian, I'm 20 years old, I'm a Computer Science student currently in my third year. Passionate about web development. My current goal is to become a great Full Stack developer. I love constantly learning and creating my own projects. I consider myself a serious, responsible, empathetic, hard-working person and very committed to what I propose.
-						</p>
-						<button><a href="Curriculum vitae .pdf">Download CV </a><img src="dw.svg" alt=""></button>
-					</div>
-
-					<div class="image">
-						<img src="astronauta.svg" alt="">
-					</div>
+		<div class="aboutme">
+			<img src="yo.jpeg" alt="" class="roundedFace">
+			<div class="infocontainer">
+				<h2>Adrian Diaz Manzanares</h2>
+				<p>Mi nombre es Adrian tengo 20 años, soy estudiante de Ingeniería Informática actualmente en el tercer año.
+					Apasionado del desarrollo web. Mi objetivo actual es convertirme en un gran desarrollador Full Stack.Me encanta aprender constantemente y crear mis propios proyectos.
+				</p>
+				<div class="redes">
+					<img src="instagram.svg" alt="">
+					<img src="githb.svg" alt="">
+					<img src="linkdin.svg" alt="">
+				</div>
+				<h3>Some of my skills</h3>
+			
+				<div class="skills">
+					<img src="js.svg" alt="">
+					<img src="python.svg" alt="">
+					<img src="html.svg" alt="">
+					<img src="css.svg" alt="">
+					<img src="react.svg" alt="">
+				</div>
 			</div>
 		</div>
-	</section>
 
-	<section>
-		<div class="skills">
-			<div class="opacityBackground">
-				<h2 class="title2">My Skills</h2>
-				<p class="light">Here is a list of some of my skills</p>
-				<Skills />
-			</div>
-		</div>
-	</section>
 
-	<Carrousel client:visible/>
-	<ContactForm />
-	
+	</section>
 </Layout>
 
+
+
+
 <style>
-	.main-container {
-		width: 100vw;
-		height: 100vh;
-		background-image: url(background.webp);
-		overflow: hidden;
-	}
+.topcontainer1 {
+	min-height: 100vh;
+	width: 100%;
+	height: 100vh;
+}
 
-	.main-container img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
+.topcontainer1 img {
+	width: 3rem;
+	padding: 3rem;
+}
 
+.topcontainer {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	height: 80%;
+}
 
-	.earth {
-		transform: rotate(90deg);
-	}
+.leftNav {
+	display: flex;
+	flex-direction: column;
 
-	.info-section {
-		width: 100vw;
-		background-color: #190024;
-		height: max-content;
-    	min-height: 100vh;
-	}
-
-	.title2 {
-		color: transparent;
-        font-size: 3rem;
-        -webkit-text-stroke: 2px #CEB7FF;
-		text-align: center;
-		padding: 2rem;
-		margin: 0;
-	}
-
-	.info {
-		display: grid;
-		grid-template-columns: 55% 45%;
-		align-items: center;
-
-	}
-
-	.text {
-		padding: 2rem;
-		margin-left: 8rem;
-		color: #fff;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: flex-end;
-	}
-
-	.text button {
-		border: none;
-		border-radius: 20px;
-		background-color: #CEB7FF;
-		color: #fff;
-		font-weight: 300;
-		padding: 1rem 2rem;
-		display: flex;
-		align-items: center;
-		margin-top: 1rem;
-		gap : 1rem;
-		box-shadow: 0 0 1em 0 #a07af3;
-	}
-
-	.text button:hover {
-		background-color: #a07af3;
-	}
-
-	.text button a {
-		color: #fff;
-		text-decoration: none;
-	}
-
-	.text p {
-		font-size: 1.5rem;
-		line-height: 25px;
-		border: 2px solid #CEB7FF;
-		padding: 2rem;
-		border-radius: 20px;
-		font-weight: 300;
-	}
-
-	.image {
-		filter: drop-shadow(10px 10px 200px $tod-tri) drop-shadow(-10px -10px 50px $tod-tri);
-	}
-
-
-	.image img {
-		width: 40rem;
-		filter: drop-shadow(0 0 1em #CEB7FF);
-		margin-bottom: 2rem;
-	}
-
-	.skills {
-		width: 100vw;
-		height: 100vh;
-		background-image: url(space background.webp);
-		height: max-content;
-    	min-height: 100vh;
-	}
-
-	.opacityBackground {
-		width: 100%;
-		height: 100vh;
-		background-color: rgba(0, 0, 0, 0.5);
-	}
-
-	.opacityBackground p {
-		color: #fff;
-		text-align: center;
-		font-size: 1.5rem;
-		font-weight: 300;
-		-webkit-text-stroke: 2px #CEB7FF;
-	}
+}
 
 
 
+.leftNav img {
+	width: 2rem;
+	padding-left: 3rem;
+}
+
+.contentcontainer {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: 100%;
+	height: 100%;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+.content h1 {
+	font-size: 4rem;
+	font-family: ClashDisplay;
+	color: #fff;
+}
+
+.content h1 span {
+	/* background: -webkit-linear-gradient(171deg, #7F5AF0 0%, rgb(90, 140, 240) 50%, rgb(90, 102, 240) 100%); */
+	background: rgb(0,0,0);
+	background: linear-gradient(171deg, rgb(65, 61, 61) 0%, rgba(90,103,240,1) 42%, rgba(90,184,240,1) 79%, rgba(90,240,164,1) 92%, rgba(90,234,240,1) 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.content p {
+	font-size: 1.5rem;
+	font-family: ClashDisplay;
+	color: #fff;
+	
+}
+
+.btn {
+	background: #7F5AF0;
+	border: none;
+	padding: 1rem 2rem;
+	border-radius: 1rem;
+	color: #fff;
+	font-size: 1.5rem;
+	font-family: ClashDisplay;
+	cursor: pointer;
+	margin-top: 5rem;
+}
+
+.btn:hover {
+	background: #5A6CF0;
+}
+
+.arrow {
+	width: 2rem;
+}
+
+.aboutme {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	height: 100vh;
+}
+
+.infocontainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: 50%;
+	height: 100%;
+	
+}
+
+.infocontainer h2 {
+	font-size: 3rem;
+	font-family: ClashDisplay;
+	color: #fff;
+}
+
+.infocontainer h2::after {
+	content: "";
+	display: block;
+	width: 5rem;
+	height: 0.5rem;
+	background: #7F5AF0;
+	margin-top: 1rem;
+}
+
+.infocontainer h3 {
+	font-size: 2rem;
+	font-family: ClashDisplay;
+	color: #fff;
+}
+
+.infocontainer p {
+	font-size: 1.5rem;
+	font-family: ClashDisplay;
+	color: #fff;
+
+}
+
+.roundedFace {
+	width: 20rem;
+	height: 20rem;
+	border-radius: 50%;
+	object-fit: cover;
+	margin-right: 8rem;
+}
+
+.redes {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+
+}
+
+.redes img {
+	width: 2rem;
+	padding: 1rem;
+}
+
+.skills img {
+	width: 2rem;
+	padding: 1rem;
+}
+	
 </style>
+
+
 
