@@ -55,8 +55,92 @@ import Layout from '../layouts/Layout.astro';
 				</div>
 			</div>
 		</div>
+	</section>
 
-
+	<section>
+		<div class="projects">
+			<h2>Projects</h2>
+			<div class="cards">
+				<div class="card">
+					<h3>Cluby</h3>
+					<p>Cluby is a club based social media FullStack project with php api rest baceknd and Firebase real time chat, where you can meet new friends and chat with them.</p>
+					<div class="tecs">
+						<img src="js.svg" alt="">
+						<img src="css.svg" alt="">
+						<img src="html.svg" alt="">
+						<img src="firebase.svg" alt="">
+						<img src="php.svg" alt="">
+					</div>
+					<img src="cluby.svg" alt="">
+					<div class="btnContainer">
+						<button class="btnCard">See on GitHub</button>
+					</div>
+				</div>
+				<div class="card">
+					<h3>Tennis App</h3>
+					<p>A news and stats app, with firebase auth. Matches and player stats from a public tennis Api.</p>
+					<div class="tecs">
+						<img src="react.svg" alt="">
+						<img src="tailwind.svg" alt="">
+						<img src="firebase.svg" alt="">
+					</div>
+					<img src="tennis.svg" alt="">
+					<div class="btnContainer">
+						<button class="btnCard">See on GitHub</button>
+					</div>				</div>
+				<div class="card">
+					<h3>Yes or no chooser</h3>
+					<p>Yes or no react chooser with coin animation</p>
+					<div class="tecs">
+						<img src="react.svg" alt="">
+					</div>
+					<img src="coin.svg" alt="">
+					<div class="btnContainer">
+						<button class="btnCard">See on GitHub</button>
+					</div>				</div>
+				<div class="card">
+					<h3>Dgt road images scraper</h3>
+					<p>Dgt road images scraper.You can enter the specifc km you want the image.</p>
+					<div class="tecs">
+						<img src="python.svg" alt="">
+						<img src="selenium.svg" alt="">
+						<img src="jupyter.svg" alt="">
+					</div>
+					<img src="dgt.svg" alt="">
+					<div class="btnContainer">
+						<button class="btnCard">See on GitHub</button>
+					</div>				</div>
+				<div class="card">
+					<h3>Movie recommender</h3>
+					<p>Cluby is a club based social media with php api rest baceknd and Firebase real time chat, where you can meet new friends and chat with them.</p>
+					<div class="tecs">
+						<img src="js.svg" alt="">
+						<img src="css.svg" alt="">
+						<img src="html.svg" alt="">
+						<img src="firebase.svg" alt="">
+						<img src="php.svg" alt="">
+					</div>
+					<img src="movie.svg" alt="">
+					<div class="btnContainer">
+						<button class="btnCard">See on GitHub</button>
+					</div>				</div>
+				<div class="card">
+					<h3>Cluby</h3>
+					<p>Cluby is a club based social media with php api rest baceknd and Firebase real time chat, where you can meet new friends and chat with them.</p>
+					<div class="tecs">
+						<img src="js.svg" alt="">
+						<img src="css.svg" alt="">
+						<img src="html.svg" alt="">
+						<img src="firebase.svg" alt="">
+						<img src="php.svg" alt="">
+					</div>
+					<img src="cluby.svg" alt="">
+					<div class="btnContainer">
+						<button class="btnCard">See on GitHub</button>
+					</div>					
+				</div>
+			</div>
+		</div>
 	</section>
 </Layout>
 
@@ -157,7 +241,8 @@ import Layout from '../layouts/Layout.astro';
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
-	height: 100vh;
+	min-height: 90vh;
+	flex-wrap: wrap;
 }
 
 .infocontainer {
@@ -235,7 +320,124 @@ import Layout from '../layouts/Layout.astro';
 	border-radius: 50%;
 	color: #7F5AF0;
 }
+
+.projects {
+
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	
+}
+
+.projects h2 {
+	font-size: 3rem;
+	font-family: ClashDisplay;
+	color: #fff;
+	text-align: center;
+}
+
+.projects h2::after {
+	content: "";
+	display: block;
+	width: 5rem;
+	height: 0.5rem;
+	background: #7F5AF0;
+	margin: 1rem auto;
+}
+
+.cards {
+	display: grid;
+	grid-template-columns: repeat( auto-fit, minmax(400px, 1fr));
+	grid-gap: 1rem;
+	width: 90%;
+	height: 100%;
+}
+
+.card {
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	border-radius: 1rem;
+	border: 1px solid #7F5AF0;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-direction: column;
+}
+
+.cards h3 {
+	font-size: 1rem;
+	font-family: ClashDisplay;
+	color: #fff;
+	padding: 1rem;
+	padding-left: 3rem;
+	margin-bottom: 0;
+}
+
+.cards p {
+	font-size: 1rem;
+	font-family: ClashDisplay;
+	color: rgba(255, 255, 255, 0.535);
+	padding-left: 3rem;
+	padding-bottom: 1rem;
+	width: 80%;
+	height: 58px;
+
+}
+
+.cards img {
+	padding-left: 3rem;
+	padding-bottom: 2rem;
+}
+
+.tecs {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-left: 2rem;
+	margin-bottom: 1rem;
+}
+
+.tecs img {
+	width: 2rem;
+	padding: 1rem;
+}
+
+.btnContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding-bottom: 1rem;
+}
+
+.btnCard {
+	background: #7F5AF0;
+	border: none;
+	padding: 1em 1rem;
+	border-radius: 1rem;
+	color: #fff;
+	font-size: 1rem;
+	font-family: ClashDisplay;
+	cursor: pointer;
+	width: 50%;
+}
+
+.btnCard:hover {
+	background: #5A6CF0;
+}
+	
+
+/* media queries */
+
+@media only screen and (max-width: 600px) {
+	.roundedFace {
+		margin: 0;
+		margin-bottom: 2rem;
+	}
+}
 </style>
 
 
