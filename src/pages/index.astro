@@ -18,7 +18,7 @@ import Layout from '../layouts/Layout.astro';
 					<h1>Bienvenido, soy <span>Adrian</span></h1>
 					<p>Computer Science student at Universidad Europea
 					</p>
-					<button class="btn">Download Cv</button>
+					<button class="btn"><a href="Curriculum vitae.pdf" target="_blank">Download Cv</a></button>
 					<img src="arrow.svg" alt="">
 				</div>
 			</div>
@@ -145,8 +145,29 @@ import Layout from '../layouts/Layout.astro';
 	</section>
 
 	<section>
-		<h2>Contactemos!</h2>
+		<div class="contact">
+			<h2>Contactemos!</h2>
+			<div class="contacts">
+				<div class="title">
+					<img src="mail.svg" alt="" class="d">
+					<span>E-mail:</span>
+				</div>
+				<p>adriandiazmanzanares9@gmail.com</p>
+				<img src="copy.svg" alt="" class="copi">
+			</div>
+		</div>
 	</section>
+
+	<footer>
+		<div class="footer">
+			<p>Adrian Diaz · 2023</p>
+			<div class="redes">
+				<img src="instagram.svg" alt="">
+				<img src="githb.svg" alt="">
+				<img src="linkdin.svg" alt="">
+			</div>
+		</div>
+	</footer>
 </Layout>
 
 
@@ -247,7 +268,6 @@ import Layout from '../layouts/Layout.astro';
 	justify-content: center;
 	align-items: flex-start;
 	min-height: 90vh;
-
 }
 
 .infocontainer {
@@ -433,7 +453,89 @@ import Layout from '../layouts/Layout.astro';
 .btnCard:hover {
 	background: #5A6CF0;
 }
+
+.btn a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.contact {
+	min-height: 50vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	/* background-color: #7f5af05b;
+	border-radius: 6px; */
 	
+}
+
+.contact h2 {
+	font-size: 2rem;
+	font-family: ClashDisplay;
+	color: #fff;
+	text-align: center;
+
+}
+
+.contact h2::after {
+	content: "";
+	display: block;
+	width: 5rem;
+	height: 0.5rem;
+	background: #7F5AF0;
+	margin: 1rem auto;
+}
+
+.contacts {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.d {
+	width: 2rem;
+	padding: 1rem;
+}
+
+.contact p {
+	font-size: 1.5rem;
+	font-family: ClashDisplay;
+	color: #fff;
+	text-align: center;
+}
+
+.title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.title span{
+	font-size: 1rem;
+	font-family: ClashDisplay;
+	color: #fff;
+	text-align: center;
+}
+
+.copi {
+	width: 1rem;
+}
+
+.footer {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: #7f5af05b;
+}
+
+.footer p {
+	font-size: 1rem;
+	font-family: ClashDisplay;
+	color: #fff;
+	text-align: center;
+}
 
 /* media queries */
 
