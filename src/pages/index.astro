@@ -40,9 +40,15 @@ import Layout from '../layouts/Layout.astro';
 					Apasionado del desarrollo web. Mi objetivo actual es convertirme en un gran desarrollador Full Stack.Me encanta aprender constantemente y crear mis propios proyectos.
 				</p>
 				<div class="redes">
-					<img src="instagram.svg" alt="">
-					<img src="githb.svg" alt="">
-					<img src="linkdin.svg" alt="">
+					<a href="https://www.instagram.com/adrii.diazz/?igshid=YmMyMTA2M2Y%3D" target="_blank">
+						<img src="instagram.svg" alt="">
+					</a>
+					<a href="https://github.com/adriDiazz" target="_blank">
+						<img src="githb.svg" alt="">
+					</a>
+					<a href="https://www.linkedin.com/in/adrian-d%C3%ADaz-manzanares-979b33220/" target="_blank">
+						<img src="linkdin.svg" alt="">
+					</a>
 				</div>
 				<h3>Some of my skills</h3>
 			
@@ -74,7 +80,9 @@ import Layout from '../layouts/Layout.astro';
 					</div>
 					<img src="cluby.svg" alt="">
 					<div class="btnContainer">
-						<button class="btnCard">See on GitHub</button>
+					
+						<button class="btnCard"><a href="https://github.com/adriDiazz/WebFinalProject" target="_blank">See on github
+						</a></button>
 					</div>
 				</div>
 				<div class="card">
@@ -87,8 +95,8 @@ import Layout from '../layouts/Layout.astro';
 					</div>
 					<img src="tennis.svg" alt="">
 					<div class="btnContainer">
-						<button class="btnCard">See on GitHub</button>
-					</div>				</div>
+						<button class="btnCard"><a href="https://github.com/adriDiazz/tennis-app" target="_blank">See on github
+						</a></button>					</div>				</div>
 				<div class="card">
 					<h3>Yes or no chooser</h3>
 					<p>Yes or no react chooser with coin animation</p>
@@ -97,8 +105,8 @@ import Layout from '../layouts/Layout.astro';
 					</div>
 					<img src="coin.svg" alt="">
 					<div class="btnContainer">
-						<button class="btnCard">See on GitHub</button>
-					</div>				</div>
+						<button class="btnCard"><a href="https://github.com/adriDiazz/yes-no-chooser" target="_blank">See on github
+						</a></button>						</div>				</div>
 				<div class="card">
 					<h3>Dgt road images scraper</h3>
 					<p>Dgt road images scraper.You can enter the specifc km you want the image.</p>
@@ -109,8 +117,8 @@ import Layout from '../layouts/Layout.astro';
 					</div>
 					<img src="dgt.svg" alt="">
 					<div class="btnContainer">
-						<button class="btnCard">See on GitHub</button>
-					</div>				</div>
+						<button class="btnCard"><a href="https://github.com/adriDiazz" target="_blank">See on github
+						</a></button>						</div>				</div>
 				<div class="card">
 					<h3>Movie recommender</h3>
 					<p>Movie recommender system desktop App, based on movielens datasets for my 
@@ -123,10 +131,11 @@ import Layout from '../layouts/Layout.astro';
 					</div>
 					<img src="movie.svg" alt="">
 					<div class="btnContainer">
-						<button class="btnCard">See on GitHub</button>
+						<button class="btnCard"><a href="https://github.com/adriDiazz" target="_blank">See on github
+						</a></button>	
 					</div>				</div>
 				<div class="card">
-					<h3>Cluby</h3>
+					<h3>Cinema react app</h3>
 					<p>Cluby is a club based social media with php api rest baceknd and Firebase real time chat, where you can meet new friends and chat with them.</p>
 					<div class="tecs">
 						<img src="js.svg" alt="">
@@ -137,7 +146,8 @@ import Layout from '../layouts/Layout.astro';
 					</div>
 					<img src="cluby.svg" alt="">
 					<div class="btnContainer">
-						<button class="btnCard">See on GitHub</button>
+						<button class="btnCard"><a href="https://github.com/adriDiazz/cinema-react-app" target="_blank">See on github
+						</a></button>	
 					</div>					
 				</div>
 			</div>
@@ -162,9 +172,15 @@ import Layout from '../layouts/Layout.astro';
 		<div class="footer">
 			<p>Adrian Diaz · 2023</p>
 			<div class="redes">
-				<img src="instagram.svg" alt="">
-				<img src="githb.svg" alt="">
-				<img src="linkdin.svg" alt="">
+				<a href="https://www.instagram.com/adrii.diazz/?igshid=YmMyMTA2M2Y%3D" target="_blank">
+					<img src="instagram.svg" alt="">
+				</a>
+				<a href="https://github.com/adriDiazz" target="_blank">
+					<img src="githb.svg" alt="">
+				</a>
+				<a href="https://www.linkedin.com/in/adrian-d%C3%ADaz-manzanares-979b33220/" target="_blank">
+					<img src="linkdin.svg" alt="">
+				</a>
 			</div>
 		</div>
 	</footer>
@@ -436,6 +452,12 @@ import Layout from '../layouts/Layout.astro';
 	align-items: center;
 	width: 100%;
 	padding-bottom: 1rem;
+}
+
+.btnContainer a {
+	text-decoration: none;
+	color: #fff;
+
 }
 
 .btnCard {
